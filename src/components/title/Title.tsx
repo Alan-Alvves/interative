@@ -1,10 +1,25 @@
-import { PropsWithChildren } from "react";
 import '../../components/title/Title.css'
 
-type TitleProps = {
-    
+interface Test{
+    texto: string;
 }
 
-export function Title(props: PropsWithChildren<TitleProps>){
-    return <h1 className="teste2">{props.children}</h1>
+export function Title({texto}: Test){
+    return (
+        <div className="title">
+            <h1>{texto}</h1>
+        </div>
+    )
+}
+
+interface Texto2{
+    texto2: string;
+}
+
+export function Texto2({texto2}: Texto2){
+    return (
+        <div className="title">
+            <h1>{texto2}</h1>
+        </div>
+    )
 }
